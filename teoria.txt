@@ -1,0 +1,76 @@
+MODELS
+=> CONECTAR LA DB
+=> ARMAR LA QUERY
+=> TRATAR DE HACER EL POST
+
+SERVICE
+=> SI TODO SALE BIEN ARMO LA respuesta
+
+VIEW
+=> FORMA DE LA RESPUESTA
+
+CONTROLLER
+=> VALIDACIONES
+=> MANDO TODOS LOS DATOS
+=> ENVIO LA RESPUESTA
+=> SI HAY ERROR ENVIO EL ERROR.
+
+
+Tomando de base el ejemplo, realizar la implementación del resto de los recursos para
+completar el servidor del ejemplo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+models
+    datos => SELECT 
+///////conectar DB
+///////ARMAR LA QUERY    QUERY: 
+///////hacer el post
+
+
+views
+//////forma de la respuesta.
+
+
+    vista
+    ===>>> JSON (FORMA PARA MOSTRAR LA INFORMACIÓN)
+        libro = {id, nombre, des, gen, perso}
+    PARA FRONT END
+        =>
+
+    PARA BACK END
+        =>
+        =>
+
+
+controllers
+    logica de conexion con el afuera (validar datos ingresados)
+    NO ES LOGICA DE CONEXCION CON BASE DE DATOS
+    => APP.POST
+
+service
+///////si todo sale bien armo la respuesta.
+
+    logica de negocio
+    (validar datos a ingresar en db)
+    => IF (!id)
