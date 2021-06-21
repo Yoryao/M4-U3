@@ -2,7 +2,7 @@ let personaService = require('../services/personaService');
 
 module.exports = {
     guardarUnaPersona: async(persona) => {
-        let personaNueva = personaService.guardarUnaPersona(persona);
+        let personaNueva = await personaService.guardarUnaPersona(persona);
         return personaNueva;
     },
     /*

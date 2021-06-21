@@ -1,24 +1,16 @@
-/* MODELS
-=> CONECTAR LA DB
-=> ARMAR LA QUERY
-=> TRATAR DE HACER EL POST */
-
-//requiere la DB para conectarse.
 let qy = require('../views/db');
 
-//Modulo que exporta las query en formato JSON {  xxx : xxx }
 module.exports = {
 
-    // query para insertar datos a la db, obtenidos de un Json (persona).
     guardarUnaPersona: async(persona) => {
-        //verificar la query.
 
         const query = 'INSERT INTO persona (nombre, apellido, nickname, edad, email) VALUES (?, ?, ?, ?, ?)';
 
-        let result = await qy(query, [persona.nombre, persona.apellido, persona.nickname, persona.edad, persona.email]);
+        //let result = await qy(query, [persona.nombre, persona.apellido, persona.nickname, persona.edad, persona.email]);
+        let result = await qy(query, ["jorge", "Rivera", "Geo", 32, "hola@hola.com"]);
 
-        //muestra el el id de la persona ingresada.
-        return result.insertid;
+
+        return result;
     },
     /*
         traerUnaPersona: async(id) => {
@@ -42,4 +34,4 @@ module.exports = {
             let result = await conexion.query('UPDATE persona SET deleted = ?, date_deleted = ?, WHERE id = ?', [true, fecha, id]);
             return result.changedRows;
         }*/
-}
+};
